@@ -9,8 +9,8 @@ Python source code.
 
 This version requires Python 2.7.
 """
-
-from distutils.core import setup
+from setuptools import find_packages, setup
+# from distutils.core import setup
 from os import path, listdir
 
 
@@ -72,7 +72,7 @@ setup(
             '*.tokens',
             ]
         },
-
+    entry_points={'console_scripts':['j2py = java2python.main:main']},
     scripts=[
         'bin/j2py',
         ],
